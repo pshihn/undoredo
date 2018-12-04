@@ -1,0 +1,28 @@
+{
+  "name": "undoredo",
+  "version": "0.0.1",
+  "description": "Simple undo-redo manager ",
+  "main": "bin/index.js",
+  "module": "bin/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pshihn/undoredo.git"
+  },
+  "keywords": [
+    "undo",
+    "redo"
+  ],
+  "author": "Preet Shihn <preetshihn@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/pshihn/undoredo/issues"
+  },
+  "homepage": "https://github.com/pshihn/undoredo#readme",
+  "devDependencies": {
+    "tslint": "^5.11.0",
+    "typescript": "^3.2.1"
+  }
+}

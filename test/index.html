@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=yes">
+</head>
+
+<body>
+  <script type="module">
+    import UndoRedo from '../bin/index.js';
+    const ur = new UndoRedo();
+
+    ur.push('A', '-A');
+    ur.push('B', '-B');
+    ur.push('C', '-C');
+
+    console.log(ur.canUndo(), 'should be true');
+    console.log(ur.canRedo(), 'should be false');
+    console.log(ur.undo(), 'should be -C');
+    console.log(ur.undo(), 'should be -B');
+    console.log(ur.undo(), 'should be -A');
+    console.log(ur.canUndo(), 'should be false');
+    console.log(ur.canRedo(), 'should be true');
+    console.log(ur.redo(), 'should be A');
+    console.log(ur.redo(), 'should be B');
+    console.log(ur.redo(), 'should be C');
+    console.log(ur.canUndo(), 'should be true');
+    console.log(ur.canRedo(), 'should be false');
+
+    console.log(ur.undo(), 'should be -C');
+    console.log(ur.undo(), 'should be -B');
+    console.log(ur.canUndo(), 'should be true');
+    console.log(ur.canRedo(), 'should be true');
+    ur.push('D', '-D');
+    console.log(ur.canUndo(), 'should be true');
+    console.log(ur.canRedo(), 'should be false');
+    console.log(ur.undo(), 'should be -D');
+    console.log(ur.undo(), 'should be -A');
+    console.log(ur.canUndo(), 'should be false');
+    console.log(ur.canRedo(), 'should be true');
+    console.log(ur.redo(), 'should be A');
+    console.log(ur.redo(), 'should be D');
+    console.log(ur.canUndo(), 'should be true');
+    console.log(ur.canRedo(), 'should be false');
+  </script>
+</body>
+
+</html>
