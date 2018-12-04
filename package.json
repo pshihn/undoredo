@@ -1,5 +1,5 @@
 {
-  "name": "undoredo",
+  "name": "udrd",
   "version": "0.0.1",
   "description": "Simple undo-redo manager ",
   "main": "bin/index.js",
